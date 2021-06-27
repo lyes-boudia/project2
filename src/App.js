@@ -1,25 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import Profiles from './components/Profile/ProfileList'
 
-function App() {
+const profiles = [
+  {
+    fullName: "Ali Alem",
+    profession: "developper",
+    bio: "I am a web developper"
+  },
+  {
+    fullName: "Ania Alem",
+    profession: "cooker",
+    bio: "I am a cooker"
+  }
+]
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Profiles Profile={profiles} />
+      {/* <Profile 
+        fullName="Ali Alem" 
+        profession="developper" 
+        bio="I am a web developper"/>
+      <Profile 
+        fullName="Amine Amine" 
+        profession="Architect" 
+        bio="I am an architect"/> */}
     </div>
   );
-}
+};
 
 export default App;
